@@ -25,6 +25,7 @@ public static class MauiProgram
 
         Barrel.ApplicationId = "dotnetpodcasts";
 
+
         return builder.Build();
     }
 }
