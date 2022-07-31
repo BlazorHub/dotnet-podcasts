@@ -7,7 +7,7 @@ products:
 - dotnet-core
 - ef-core
 - blazor
-- xamarin
+- dotnet-maui
 - azure-sql-database
 - azure-storage
 - azure-container-apps
@@ -22,15 +22,6 @@ The .NET Podcast app is a sample application showcasing [.NET 6](https://dotnet.
 You can browse a [live running version of the .NET Podcasts app](https://dotnetpodcasts.azurewebsites.net/) powered by ASP.NET Core and Blazor.
 
 ![Logo](./docs/net-podcasts.png)
-
-
-## Build Status
-
-| Project | Status |
-| --- | --- |
-|Website|![Build status](/../../actions/workflows/podcast-web.yml/badge.svg)|
-|Web API|![Services Build status](/../../actions/workflows/podcast-api.yml/badge.svg)|
-|Listen Together Hub| ![Services Build status](/../../actions/workflows/podcast-hub.yml/badge.svg) |
 
 
 ## Application Architecture Diagram
@@ -60,6 +51,11 @@ The easiest way to get started is to build and run the .NET Podcasts app service
 
 ```cli
 docker-compose up
+```
+
+- *For Apple arm64-based system*:
+```cli
+docker-compose -f docker-compose.arm64.yml -f docker-compose.override.yml up
 ```
 
 This will deploy and start all services required to run the web, mobile, and desktop apps. The Web API will run on `localhost:5000` and the SignalR Hub for listen together will run on `localhost:5001`.
