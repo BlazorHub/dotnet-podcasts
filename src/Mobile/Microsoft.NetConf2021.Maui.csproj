@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <!-- iOS, Android, MacCatalyst -->
-    <TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <RootNamespace>Microsoft.NetConf2021.Maui</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -65,6 +65,8 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
     <PackageReference Include="MonkeyCache.FileStore" Version="2.0.0-beta" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="SkiaSharp" Version="2.88.3" />
+    <PackageReference Include="System.Threading.RateLimiting" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
